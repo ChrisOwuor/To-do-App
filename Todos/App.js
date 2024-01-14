@@ -1,25 +1,29 @@
-import { StatusBar } from "expo-status-bar";
-import { Text,  ScrollView } from "react-native";
-import AddView from "./Hello";
+import React from "react";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import Header from "./components/Header.js";
 
-export default function App() {
+
+const App = () => {
   return (
-    <ScrollView className="outline outline-1 flex-1 align-top ">
-      <View className="">
-
+    <SafeAreaView style={styles.container}>
+      <Header title="Mojo Music" />
+      <View style={styles.content}>
+        <Text>Main Content Goes Here</Text>
       </View>
-      <Text className=" mt-6 bg-teal-200 p-6 m-4 rounded-md">
-        Discover the world of limitless possibilities with react native
-      </Text>
-      <Text className=" mt-6 bg-teal-200 p-6 m-4 rounded-md">
-        Discover the world of limitless possibilities with react native
-      </Text>
-      <Text className="mt-6 bg-teal-200 p-6 m-4 rounded-md ">I love this React native</Text>
-      <AddView/>
-
-      <StatusBar style="auto" />
-    </ScrollView>
+    </SafeAreaView>
   );
-}
+};
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor:"blue"
+  },
+  content: {
+    flex: 1,
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+});
 
+export default App;
