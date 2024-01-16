@@ -15,7 +15,18 @@ This mobile app is a simple to-do list application built using React Native. It 
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/react-native-todo-app.git
+   git clone https://github.com/ChrisOwuor/To-do-App.git
+```
+``` 
+ cd Todos
+```
+
+``` cmd
+ npm install
+```
+``` cmd
+ npm start
+```
