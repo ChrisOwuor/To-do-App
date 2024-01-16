@@ -1,18 +1,23 @@
 // StackNavigator.js
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./HomeScreen";
-import TasksScreen from "./TasksScreen";
-import SettingsScreen from "./SettingsScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Home from "../Screens/Home";
+import Task from "../Screens/Task";
+import Settings from "../Screens/Settings";
+import Profile from "../Screens/Profile";
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Tasks" component={TasksScreen} />
-      <Stack.Screen name="Settings" component={SettingsScreen} />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ title: "All Tasks " }}
+      />
+      <Stack.Screen name="Tasks" component={Task} />
+      <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 };
