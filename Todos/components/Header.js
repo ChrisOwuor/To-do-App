@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text ,Button } from "react-native";
 
-const Header = ({ title }) => {
+const Header = ({ title ,navigation }) => {
   return (
-    <View className=" flex-1 bg-green-200 flex-row ">
-      <Text className="text-2xl">{title}</Text>
+    <View className="pl-3 h-max flex justify-start flex-row pt-12  ">
+      <Text className="text-2xl ">{title}</Text>
     </View>
   );
 };
