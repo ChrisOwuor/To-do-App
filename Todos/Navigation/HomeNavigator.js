@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../Screens/Home";
 import TaskDetails from "../Screens/TaskDetails";
 import Header from "../components/Header";
+import { View, Text } from "react-native";
+import react from "react";
 
 const Stack = createNativeStackNavigator();
 
@@ -12,22 +14,16 @@ const HomeNavigator = () => {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{
-          headerTitle: () => <Header title={"Homes"} />,
-          headerStyle: {
-            height: 120,
-            shadowColor:"#fff"
-          },
-          headerTintColor: "#fff",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
-        }}
+        options={(navigaion) => ({
+          header: () => <Header title="Mojo" navigation={navigaion} />,
+        })}
       />
       <Stack.Screen
         name="TaskDetails"
         component={TaskDetails}
-        options={{ title: " Task Detail " }}
+        options={() => ({
+          headerShadowVisible: false,
+        })}
       />
     </Stack.Navigator>
   );
